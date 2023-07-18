@@ -1,6 +1,69 @@
-* {
-    box-sizing: border-box;
-    font-size: 62.5%; /* 16px * 0.625 = 10px = 1rem */
+/* === GENERAL === */
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 16px * 0.625 = 10px = 1rem */
 }
 
-/* 19:05 mins */
+body {
+  font: 1.6rem Helvetica;
+  height: 100vh;
+  margin: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+
+/* === HEADER === */
+
+header nav {
+  background-color: rgb(19, 25, 33);
+  display: flex;
+  grid-area: header;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+#logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a:hover {
+  color: orange;
+}
+
+/* === MAIN === */
+
+.main {
+  grid-area: main;
+}
+
+/* === FOOTER === */
+
+footer {
+  background-color: rgb(19, 25, 33);
+  color: white;
+  display: flex;
+  grid-area: footer;
+  justify-content: center;
+  padding-top: 1rem;
+}

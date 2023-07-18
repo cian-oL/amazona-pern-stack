@@ -1,18 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amazona</title>
     <!-- External links -->
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-    <header>
-        <nav></nav>
-    </header>
-    <aside>Shopping Categories</aside>
-    <main></main>
-    <footer></footer>
-</body>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <header>
+        <nav>
+          <span id="logo"><a href="index.html">amazona</a></span>
+          <ul id="nav-bar">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <aside>Shopping Categories</aside>
+
+      <main class="content">
+        <ul class="products">
+          <li class="product">
+            <img src="/images.holder-image.jpg" alt="Product Image" />
+            <p class="product-name">Product Name</p>
+            <p class="product-brand">Product Brand</p>
+            <p class="product-price">Price</p>
+          </li>
+        </ul>
+      </main>
+
+      <footer class="footer">All rights reserved etc</footer>
+    </div>
+  </body>
 </html>
