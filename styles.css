@@ -32,7 +32,7 @@ a:hover {
 
 /* === HEADER === */
 
-header nav {
+header {
   background-color: rgb(19, 25, 33);
   display: flex;
   grid-area: header;
@@ -40,8 +40,17 @@ header nav {
   padding: 0.5rem;
 }
 
-header a {
+nav a {
   color: white;
+}
+
+nav button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 3rem;
+  padding: 0.5rem;
 }
 
 #logo {
@@ -52,6 +61,35 @@ header a {
 
 nav li {
   display: inline;
+}
+
+/* === SIDEBAR === */
+
+.sidebar {
+  background-color: #f0f0f0;
+  display: none;
+  height: 100%;
+  position: fixed;
+  width: 30rem;
+}
+
+.sidebar.open {
+  display: block;
+}
+
+.sidebar-close-button {
+  border: 0.1rem black solid;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
+  height: 3rem;
+  padding: 0.5rem;
+  padding-top: 0rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 1.5rem;
+  width: 3rem;
 }
 
 /* === MAIN === */

@@ -12,7 +12,10 @@
     <div class="grid-container">
       <header>
         <nav>
+          <button id="open-menu" onclick="openMenu()">&#9776</button>
           <span id="logo"><a href="index.html">amazona</a></span>
+        </nav>
+        <nav>
           <ul id="nav-bar">
             <li><a href="login.html">Login</a></li>
             <li><a href="cart.html">Cart</a></li>
@@ -20,7 +23,14 @@
         </nav>
       </header>
 
-      <aside>Shopping Categories</aside>
+      <aside class="sidebar">
+        <h3>Shopping Categories</h3>
+        <button class="sidebar-close-button" onclick="closeMenu()">x</button>
+        <ul>
+          <li><a href="#">Clothes category placeholder</a></li>
+          <li><a href="#">Clothes category placeholder</a></li>
+        </ul>
+      </aside>
 
       <main class="content">
         <ul class="products">
@@ -64,5 +74,6 @@
 
       <footer class="footer">All rights reserved etc</footer>
     </div>
+    <script src="./app.js" charset="utf-8"></script>
   </body>
 </html>
