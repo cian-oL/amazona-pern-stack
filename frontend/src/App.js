@@ -2,11 +2,19 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
+  const openMenu = () => {
+    document.querySelector(".sidebar").classList.add("open");
+  };
+
+  const closeMenu = () => {
+    document.querySelector(".sidebar").classList.remove("open");
+  };
+
   return (
     <div className="grid-container">
       <header>
         <nav>
-          <button id="open-menu" onclick="openMenu()">
+          <button id="open-menu" onClick={openMenu}>
             &#9776;
           </button>
           <span id="logo">
@@ -27,7 +35,7 @@ function App() {
 
       <aside className="sidebar">
         <h3>Shopping Categories</h3>
-        <button className="sidebar-close-button" onclick="closeMenu()">
+        <button className="sidebar-close-button" onClick={closeMenu}>
           x
         </button>
         <ul>

@@ -67,14 +67,15 @@ nav li {
 
 .sidebar {
   background-color: #f0f0f0;
-  display: none;
   height: 100%;
   position: fixed;
+  transition: all 0.5s;
+  transform: translateX(-30rem);
   width: 30rem;
 }
 
 .sidebar.open {
-  display: block;
+  transform: translateX(0rem);
 }
 
 .sidebar-close-button {
