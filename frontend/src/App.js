@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import data from "./data";
 
 function App() {
   const openMenu = () => {
@@ -50,51 +51,19 @@ function App() {
 
       <main className="content">
         <ul className="products">
-          <li className="product">
-            <img src="/images/holder-image.jpg" alt="Product Image" />
-            <p className="product-name">
-              <a href="#">Product Name</a>
-            </p>
-            <p className="product-brand">Product Brand</p>
-            <p className="product-price">$00</p>
-            <p className="product-rating">xx Stars (yy reviews)</p>
-          </li>
-          <li className="product">
-            <img src="/images/holder-image.jpg" alt="Product Image" />
-            <p className="product-name">
-              <a href="#">Product Name</a>
-            </p>
-            <p className="product-brand">Product Brand</p>
-            <p className="product-price">$00</p>
-            <p className="product-rating">xx Stars (yy reviews)</p>
-          </li>
-          <li className="product">
-            <img src="/images/holder-image.jpg" alt="Product Image" />
-            <p className="product-name">
-              <a href="#">Product Name</a>
-            </p>
-            <p className="product-brand">Product Brand</p>
-            <p className="product-price">$00</p>
-            <p className="product-rating">xx Stars (yy reviews)</p>
-          </li>
-          <li className="product">
-            <img src="/images/holder-image.jpg" alt="Product Image" />
-            <p className="product-name">
-              <a href="#">Product Name</a>
-            </p>
-            <p className="product-brand">Product Brand</p>
-            <p className="product-price">$00</p>
-            <p className="product-rating">xx Stars (yy reviews)</p>
-          </li>
-          <li className="product">
-            <img src="/images/holder-image.jpg" alt="Product Image" />
-            <p className="product-name">
-              <a href="#">Product Name</a>
-            </p>
-            <p className="product-brand">Product Brand</p>
-            <p className="product-price">$00</p>
-            <p className="product-rating">xx Stars (yy reviews)</p>
-          </li>
+          {data.products.map(({ id, image, name, brand, price, rating, numReviews }) => (
+            <li className="product" id={id}>
+              <img src={image} alt="Product Image" />
+              <p className="product-name">
+                <a href="#">{name}</a>
+              </p>
+              <p className="product-brand">{brand}</p>
+              <p className="product-price">${price}</p>
+              <p className="product-rating">
+                {rating} Stars ({numReviews} reviews)
+              </p>
+            </li>
+          ))}
         </ul>
       </main>
 
