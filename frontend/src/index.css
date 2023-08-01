@@ -61,6 +61,7 @@ nav button {
 
 nav li {
   display: inline;
+  padding: 0.5rem;
 }
 
 /* === SIDEBAR === */
