@@ -1,7 +1,7 @@
 import "./App.css";
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
 function App() {
   const openMenu = () => {
@@ -21,7 +21,7 @@ function App() {
               &#9776;
             </button>
             <span id="logo">
-              <a href="index.html">amazona</a>
+              <Link to="/">amazona</Link>
             </span>
           </nav>
           <nav>
