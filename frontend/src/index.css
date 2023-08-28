@@ -162,3 +162,69 @@ footer {
   justify-content: center;
   padding-top: 1rem;
 }
+
+/* === PRODUCT DETAILS PAGE === */
+
+.back-to-results {
+  padding: 1rem;
+}
+
+.details {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.details-image {
+  flex: 2 1 60rem;
+}
+
+.details-image img {
+  max-width: 60rem;
+  widows: 100%;
+}
+
+.details-info {
+  flex: 1 1 30rem;
+}
+
+.details-action {
+  background-color: #f8f8f8;
+  border: 0.1rem #808080 solid;
+  border-radius: 0.5rem;
+  flex: 1 1 30rem;
+  padding: 1rem;
+}
+
+.details-info ul, .details-action ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.details-info li, .details-action li {
+  margin: 1rem;
+}
+
+.details-action select {
+  margin-left: 0.5rem;
+}
+
+.details-action button {
+  background-color: rgb(254, 189, 105);
+  border: 0.1rem #808080 solid;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+
+.details-action button:hover {
+  background-color: rgb(243, 168, 71);
+  border: 0.1rem #404040 solid;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin: 0.5rem;
+  padding: 1rem;
+}
