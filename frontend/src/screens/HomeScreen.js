@@ -2,12 +2,12 @@ import React from "react";
 import data from "../data";
 import { Link } from "react-router-dom";
 
-const HomeScreen = (props) => {
+const HomeScreen = () => {
   return (
     <ul className="products">
       {data.products.map(
         ({ id, image, name, brand, price, rating, numReviews }) => (
-          <li className="product" id={id}>
+          <li className="product" key={id}>
             <Link to={`/product/${id}`}>
               <img src={image} alt="Product" />
             </Link>
