@@ -8,7 +8,6 @@ const HomeScreen = () => {
     const fetchData = async () => {
       const response = await fetch("/api/products");
       const data = await response.json();
-      console.log(response);
       setProducts(data);
     };
     fetchData();
