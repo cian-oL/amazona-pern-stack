@@ -1,11 +1,22 @@
-import React from "react";
-import data from "../data";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const HomeScreen = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("/api/products");
+      const data = await response.json();
+      console.log(response);
+      setProducts(data);
+    };
+    fetchData();
+  }, []);
+
   return (
     <ul className="products">
-      {data.products.map(
+      {products.map(
         ({ id, image, name, brand, price, rating, numReviews }) => (
           <li className="product" key={id}>
             <Link to={`/product/${id}`}>
